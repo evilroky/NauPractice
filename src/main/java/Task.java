@@ -1,0 +1,8 @@
+package src.main.java;
+
+//Вариант 4. Практическое задание 5. Реализуйте интерфейс “Task” для обработки данных, поступающих в очередь.
+//Необходимо сделать методы start() и stop().
+public interface Task {
+    void start();
+    void stop();
+}
