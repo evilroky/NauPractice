@@ -7,7 +7,7 @@ import java.util.ArrayList;
 //Необходимо создать не менее 5 элементов списка.
 public class Prac3 {
 
-    public void start() {
+    public void startStreamApi() {
         ArrayList<Employee> employees = new ArrayList<>();
         employees.add(new Employee("Иванов Иван Иванович", 25, "It-Отдел", 10000.0));
         employees.add(new Employee("Петров Петр Петрович", 25, "Бухгалтерия", 10000.0));

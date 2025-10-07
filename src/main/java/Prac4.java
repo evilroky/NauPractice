@@ -12,7 +12,7 @@ import java.util.Map;
 //Вариант 4. Практическое задание 4. Необходимо сделать “GET” запрос на указанный адрес и обработать ответ.
 //Вывести только допустимые типы ответа (поле “Host”) из заголовков (запрос выполняется по адресу “https://httpbin.org/anything”).
 public class Prac4 {
-    public void start() {
+    public void startHttpClientAndJson() {
         try(HttpClient client = HttpClient.newHttpClient()){
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create("https://httpbin.org/anything"))
@@ -22,7 +22,7 @@ public class Prac4 {
             ObjectMapper objectMapper = new ObjectMapper();
             Map<String, Object> body = objectMapper.readValue(response.body(), new TypeReference<>(){});
             Map<String, Object> headers = (Map<String, Object>) body.get("headers");
-            System.out.println("Значение хоста сервера (поле “Host”): " + headers.get("Host"));
+            System.out.println("Значение хоста сервера (поле Host): " + headers.get("Host"));
         } catch (IOException | InterruptedException e) {
             e.printStackTrace();
         }

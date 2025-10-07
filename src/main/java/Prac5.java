@@ -58,7 +58,7 @@ public class Prac5 implements Task {
         }
     }
 
-    public void starts() throws InterruptedException {
+    public void startRealizationInterfaceTask() throws InterruptedException {
         Prac5 task = new Prac5();
         task.addTask("Задача 1");
         task.addTask("Задача 2");

@@ -2,12 +2,13 @@ package src.main.java;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 //Вариант 4. Практическое задание 2. Сортировка выбором.
-//Реализован механизм сортировки выбором. Формируется массив из 10 элементов, элементы могут принимать значения от -10 до 10.
+//Реализован механизм сортировки выбором. Формируется массив из n элементов(задает пользователь), элементы могут принимать значения от -10 до 10.
 public class Prac2 {
 
-    public static void selectionSort(double[] sortArr){
+    private void selectionSort(double[] sortArr){
         for (int i =0; i < sortArr.length; i++){
             int pos = i;
             double min = sortArr[i];
@@ -22,8 +23,11 @@ public class Prac2 {
         }
     }
 
-    public void start() {
-        double[] sortArr = new double[10];
+    public void startSelectionSort() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите Размер массива");
+        int n = scan.nextInt();
+        double[] sortArr = new double[n];
         Random rand = new Random();
         for (int i = 0; i < 10; i++){
             double x = rand.nextDouble(20) - 10;
